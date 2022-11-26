@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* MOBILE FONT SIZE  */
+html {
+  font-size: 8px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+
+:root {
+  --primary: #38CFD9;
+  --cozy: #23424A;
+  --dark-green: #136C72;
+  --dark-purple: #87629A;
+}
+.text-purple {
+  color: var(--dark-purple);
+}
+.text-dark-green {
+  color: var(--dark-green);
+}
+.bg-dark-green {
+  background: var(--dark-green);
+}
+.bg-primary {
+  background: var(--cozy);
+}
+.bg-dark-green {
+  background: var(--dark-green);
+}
+.text-center {
+  text-align: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+section {
+  padding: 5.4em;
+  
+}
+
+.hero {
+  max-width: 1400px;
+  justify-content: space-between;
+  /* width: 80%; */
+}
+
+.title {
+  color: #fff;
+  margin: 0;
+  font-size: 2.3rem;
+}
+.desc {
+  color: rgb(227 224 224);
+  font-size: 1.2rem;
+  margin-bottom: 2.8em;
+}
+.btn {
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: none;
+  cursor: pointer;
+  border: 2px solid;
+  padding: .8em 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn:hover {
+  background: none !important;
+  color: #fff;
+  transition: .2s background;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+.btn-rounded {
+  border-radius: 60px;
+}
+
+.row {
+  display: flex;
+  gap: 35px;
+  flex-direction: column;
+  font-size: 1.3rem;
+}
+.col {
+
+}
+.text-white {
+  color: #fff;
+}
+.hero__img img {
+  border-radius: 7px;
+}
+
+.explanation h1 {
+  font-weight: 800;
+}
+.sidebar {
+  background: var(--dark-green);
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.explanation p, .sidebar p {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 425px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  .row {
+    flex-direction: row;
+  }
+  .hero__text {
+    width: 50%;
+    order: -1;
+  }
+  .hero__img {
+    align-self: flex-start;
+    width: 35%;
+  }
+  .explanation {
+    width: 50%;
+  }
+  .sidebar {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
