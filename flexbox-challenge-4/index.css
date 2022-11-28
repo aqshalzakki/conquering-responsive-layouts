@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+  --playfair-display: 'Playfair Display', serif;
+  --roboto: 'Roboto', sans-serif;
+  --cream: #F3EED9;
+  --brown: #824936;
+  --black: #222C2A;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* maximum width of a “container” 
+is 1128px
+
+in the cery first section try setting a min-height  
+of 660px and using what we’ve covered in 
+flexbox to center the content vertically */
+.container {
+  max-width: 1128px;
+  width: 80%;
+}
+.row {
+  display: flex;
+}
+.hero {
+  background: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 660px;
+  color: var(--brown);
+}
+.hero__sub {
+  font-family: var(--roboto);
+  font-weight: 400;
+  font-size: .88rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero__title {
+  font-family: var(--playfair-display);
+  font-size: 3.75rem;
+  max-width: 70%;
+  margin: 0 auto;
+  line-height: 1em;
+}
+
+.articles > .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3.7em 1.5em;
+  gap: 2.7em;
+}
+
+.articles__title {
+  font-family: var(--playfair-display);
+  color: var(--brown);
+  font-size: 2.25rem;
+}
+.articles__row {
+  font-family: var(--roboto);
+  color: var(--black);
+  font-size: 1.31rem;
+  gap: 5em;
+}
