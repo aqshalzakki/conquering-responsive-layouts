@@ -38,7 +38,6 @@ flexbox to center the content vertically */
   font-family: var(--roboto);
   font-weight: 400;
   font-size: .88rem;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 .hero__title {
