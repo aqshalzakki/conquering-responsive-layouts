@@ -6,21 +6,32 @@
   --cream: #F3EED9;
   --brown: #824936;
   --black: #222C2A;
+  --fs-100: .88rem;
+  --fs-200: 1.31rem;
+  --fs-300: 2.25rem;
+  --fs-400: 3.75rem;
 }
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-/* maximum width of a “container” 
+img {
+  max-width: 100%;
+}
+.color-white { color: #fff; }
+.color-brown { color: var(--brown); }
+.color-cream { color: var(--cream); }
+.color-black { color: var(--black); }
+.bg-brown { background: var(--brown) !important; }
+/* maximum width of a “container”
 is 1128px
 
-in the cery first section try setting a min-height  
-of 660px and using what we’ve covered in 
+in the cery first section try setting a min-height 
+of 660px and using what we’ve covered in
 flexbox to center the content vertically */
 .container {
-  max-width: 1128px;
-  width: 80%;
+  width: min(80%, 1128px);
 }
 .row {
   display: flex;
@@ -37,35 +48,77 @@ flexbox to center the content vertically */
 .hero__sub {
   font-family: var(--roboto);
   font-weight: 400;
-  font-size: .88rem;
+  font-size: var(--fs-100);
   letter-spacing: 2px;
 }
 .hero__title {
   font-family: var(--playfair-display);
-  font-size: 3.75rem;
-  max-width: 70%;
+  font-size: var(--fs-400);
+  width: 95%;
   margin: 0 auto;
   line-height: 1em;
+  max-width: 800px;
 }
 
-.articles > .container{
+.articles {
+  min-height: 450px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.articles > .container,
+.portfolio > .container {
   margin: 0 auto;
-  padding: 3.7em 1.5em;
-  gap: 2.7em;
+  padding: 3.7em 0;
 }
 
 .articles__title {
   font-family: var(--playfair-display);
   color: var(--brown);
-  font-size: 2.25rem;
+  font-size: var(--fs-300);
+  text-align: center;
+  margin-bottom: 1.2em;
 }
 .articles__row {
   font-family: var(--roboto);
   color: var(--black);
-  font-size: 1.31rem;
-  gap: 5em;
+  font-size: var(--fs-200);
+  gap: 3em;
+}
+.portfolio {
+  background: var(--black);
+}
+.portfolio__title {
+  font-size: var(--fs-300);
+  color: var(--cream);
+}
+.portfolio__text {
+  color: #fff;
+  font-size: var(--fs-200);
+  margin-top: 1.1em;
+  font-family: var(--roboto);
+}
+
+.portfolio > .row {
+  gap: 3em;
+}
+
+.articles .col, .portfolio .col {
+  flex: 1;
+}
+
+@media screen and (max-width: 425px) {
+  :root {
+    --fs-100: .68rem;
+    --fs-200: .91rem;
+    --fs-300: 1.65rem;
+    --fs-400: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
 }
