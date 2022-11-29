@@ -4,17 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lorem</title>
+  <title>Conquering Responsive Layouts</title>
   <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="img/logo.svg">
 </head>
 <body>
-  <section class="bg-primary">
+  <header class="header-nav">
+    <a href="#">
+      <img src="img/logo.svg" alt="Main Logo" class="logo"></img>
+    </a>
+    <input id="toggleMenu" class="menu-toggler" type="checkbox">
+    <label for="toggleMenu" class="burger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+    <nav class="nav">
+      <ul class="nav__list nav__list--primary">
+        <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Products</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+      </ul>
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="#">Sign in</a></li>
+        <li class="nav__item"><a href="#" class="nav__link btn btn-rounded btn-light btn-sign-up">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero-parent bg-primary">
     <div class="hero row">
       <div class="hero__img">
         <img src="img/hero-img.jpg" alt="Hero Image">
       </div>
       <div class="hero__text">
-        <h1 class="title">Responsive layouts don't have to be a struggle</h1>
+        <h1 class="title">Responsive layouts don't have <br> to be a struggle</h1>
         <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         <a href="#" class="btn btn-rounded btn-primary">i want to learn</a>
       </div>
