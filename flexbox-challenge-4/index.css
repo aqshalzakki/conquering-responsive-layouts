@@ -16,6 +16,9 @@
   padding: 0;
   margin: 0;
 }
+body {
+  font-family: var(--roboto);
+}
 img {
   max-width: 100%;
 }
@@ -46,10 +49,10 @@ flexbox to center the content vertically */
   color: var(--brown);
 }
 .hero__sub {
-  font-family: var(--roboto);
   font-weight: 400;
   font-size: var(--fs-100);
-  letter-spacing: 2px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
 }
 .hero__title {
   font-family: var(--playfair-display);
@@ -58,6 +61,7 @@ flexbox to center the content vertically */
   margin: 0 auto;
   line-height: 1em;
   max-width: 800px;
+  margin-top: .2em;
 }
 
 .articles {
@@ -81,7 +85,6 @@ flexbox to center the content vertically */
   margin-bottom: 1.2em;
 }
 .articles__row {
-  font-family: var(--roboto);
   color: var(--black);
   font-size: var(--fs-200);
   gap: 3em;
@@ -92,12 +95,12 @@ flexbox to center the content vertically */
 .portfolio__title {
   font-size: var(--fs-300);
   color: var(--cream);
+  font-family: var(--playfair-display);
 }
 .portfolio__text {
   color: #fff;
   font-size: var(--fs-200);
   margin-top: 1.1em;
-  font-family: var(--roboto);
 }
 
 .portfolio > .row {
